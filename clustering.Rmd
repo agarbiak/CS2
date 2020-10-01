@@ -1,0 +1,138 @@
+---
+title: "K-Means Clustering"
+author: "Alex Garbiak"
+date: "`r format (Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Theory
+
+**TO ADD THEORY ABOUT CLUSTERING HERE**
+
+# `R` Practice
+
+We are managing a `portfolio` of investments that contains 200 assets. In this `portfolio` we measure the following features:
+
+* Price-to-Earnings Ratio ("_PE_"), labelled $x1$ with $x1 \sim \mathcal{N}(3,\,1)$
+* Price-to-Book Ratio ("_PB_"), labelled $x2$ with 65% of the assets following $\mathcal{N}(10,\,1)$ and the remaining 35% following $\mathcal{N}(4,\,1)$
+
+We replicate this in `R` as follows:
+
+```{r dummy-setup}
+library(dplyr) # Data manipulation
+
+set.seed(2019) # Fix result
+portfolio <- data.frame(
+  x1 = rnorm(200, 3, 1),
+  x2 = scale(
+    c(
+      rnorm(70, 4, 1),
+      rnorm(130, 10, 1)
+    )
+  )
+)
+```
+
+Here the `scale()`{.R} function scales each element in the result by subtracting the sample mean and dividing by the sample standard deviation.
+
+Next we want to explore whether these 200 assets can be divided into two clusters which we will label arbitrarily `A` and `B` based on the two metrics we have measured, PE (as $x1$) and PB (as $x2$).
+
+We will first assign the assets evenly into these two clusters:
+
+```{r naive-cluster}
+group_label_stage1 <- c(
+  rep("A", 100),
+  rep("B", 100)
+)
+
+portfolio <- portfolio %>% 
+  mutate(group_label_stage1 = group_label_stage1)
+
+ClusterACentre <- c(
+  mean(portfolio$x1[portfolio$group_label_stage1 == "A"]),
+  mean(portfolio$x2[portfolio$group_label_stage1 == "A"])
+)
+
+ClusterBCentre <- c(
+  mean(portfolio$x1[portfolio$group_label_stage1 == "B"]),
+  mean(portfolio$x2[portfolio$group_label_stage1 == "B"])
+)
+```
+
+We have:
+
+* The centre of cluster `A`, given by $(x1_A,\, x2_A)$ is `r round(ClusterACentre,3)`, and
+* The centre of cluster `B`, given by $(x1_A,\, x2_A)$ is `r round(ClusterBCentre,3)`.
+
+Next we want to calculate the Euclidean distance between:
+
+* $(x1, x2)$ and the centre of cluster `A`, and
+* $(x1, x2)$ and the centre of cluster `B`.
+
+We will label these distances as `dist_A` and `dist_B` respectively.
+
+The Euclidean distance is defined as:
+
+* For `dist_A`: $\sqrt{(x1-x1_A)^2+(x2-x2_A)^2}$, and
+* For `dist_B`: $\sqrt{(x1-x1_B)^2+(x2-x2_B)^2}$.
+
+```{r euclidean-distance}
+dist_A <- sqrt(
+  (portfolio$x1 - ClusterACentre[1])^2 
+  + (portfolio$x2 - ClusterACentre[2])^2 
+)
+
+dist_B <- sqrt(
+  (portfolio$x1 - ClusterBCentre[1])^2 
+  + (portfolio$x2 - ClusterBCentre[2])^2 
+)
+
+portfolio <- portfolio %>% 
+  mutate(
+    dist_A = dist_A,
+    dist_B = dist_B
+  )
+```
+
+Now we will update the cluster labels (`A` and `B`) by assigning to each asset the label of the cluster  whose centre is nearest from `dist_A` and `dist_B`.
+
+```{r euclid-cluster}
+portfolio <- portfolio %>% 
+  mutate(
+    group_label_stage2 = ifelse(portfolio$dist_A <= portfolio$dist_B, "A", "B")
+  )
+```
+
+Let's generate a 2x2 matrix showing the number of assets with each possible combination of values from `group_label_stage1` and `group_label_stage2`:
+
+```{r matrix-combos}
+combos <- portfolio %>% 
+  count(group_label_stage1, group_label_stage2)
+
+matrix(
+  combos$n,
+  nrow = 2,
+  dimnames = list(
+    c("A", "B"),
+    c("A", "B")
+  )
+)
+```
+
+Finally let's plot `x1` and `x2` coloured using the latest clustering labelling:
+
+```{r plot}
+library(ggplot2)
+
+portfolio %>% 
+ggplot() +
+  geom_point(
+    aes(x1, x2, colour = group_label_stage2)
+  )
+```
