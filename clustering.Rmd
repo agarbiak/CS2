@@ -1,10 +1,17 @@
 ---
 title: "K-Means Clustering"
-author: "Alex Garbiak"
+author: "Alex Garbiak <dev@alexgarbiak.com>"
 date: "`r format (Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
-    toc: yes
+    fig_caption: yes
+    theme: spacelab
+    highlight: pygments
+    number_sections: TRUE
+    toc: TRUE
+    toc_depth: 3
+    toc_float:
+      smooth_scroll: FALSE
 ---
 
 ```{r setup, include=FALSE}
@@ -24,7 +31,7 @@ We are managing a `portfolio` of investments that contains 200 assets. In this `
 
 We replicate this in `R` as follows:
 
-```{r dummy-setup}
+```{r dummy-setup, message=FALSE}
 library(dplyr) # Data manipulation
 
 set.seed(2019) # Fix result
@@ -37,6 +44,8 @@ portfolio <- data.frame(
     )
   )
 )
+
+glimpse(portfolio)
 ```
 
 Here the `scale()`{.R} function scales each element in the result by subtracting the sample mean and dividing by the sample standard deviation.
@@ -63,6 +72,8 @@ ClusterBCentre <- c(
   mean(portfolio$x1[portfolio$group_label_stage1 == "B"]),
   mean(portfolio$x2[portfolio$group_label_stage1 == "B"])
 )
+
+glimpse(portfolio)
 ```
 
 We have:
@@ -98,6 +109,8 @@ portfolio <- portfolio %>%
     dist_A = dist_A,
     dist_B = dist_B
   )
+
+glimpse(portfolio)
 ```
 
 Now we will update the cluster labels (`A` and `B`) by assigning to each asset the label of the cluster  whose centre is nearest from `dist_A` and `dist_B`.
@@ -107,6 +120,8 @@ portfolio <- portfolio %>%
   mutate(
     group_label_stage2 = ifelse(portfolio$dist_A <= portfolio$dist_B, "A", "B")
   )
+
+glimpse(portfolio)
 ```
 
 Let's generate a 2x2 matrix showing the number of assets with each possible combination of values from `group_label_stage1` and `group_label_stage2`:
