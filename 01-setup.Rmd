@@ -1,0 +1,5 @@
+# R Setup {#setup}
+
+## Preparing your environment
+
+The Institute and Faculty of Actuaries have provided their [own guide](https://www.actuaries.org.uk/system/files/field/document/R-Guide_technical.pdf) to getting up and running with `R`.

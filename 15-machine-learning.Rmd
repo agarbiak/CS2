@@ -1,28 +1,36 @@
----
-title: "K-Means Clustering"
-author: "Alex Garbiak <dev@alexgarbiak.com>"
-date: "`r format (Sys.time(), '%d %B, %Y')`"
-output:
-  html_document:
-    fig_caption: yes
-    theme: spacelab
-    highlight: pygments
-    number_sections: TRUE
-    toc: TRUE
-    toc_depth: 3
-    toc_float:
-      smooth_scroll: FALSE
----
+# Machine learning
 
-```{r setup, include=FALSE}
+## Learning Objectives
+
+1. Explain the main branches of machine learning and describe examples of the types of problems typically addressed by machine learning.
+2. Explain and apply high-level concepts relevant to learning from data.
+3. Describe and give examples of key supervised and unsupervised machine learning techniques, explaining the difference between regression and classification and between generative and discriminative models.
+4. Explain in detail and use appropriate software to apply machine learning techniques (e.g. penalised regression and decision trees) to simple problems.
+5. Demonstrate an understanding of the perspectives of statisticians, data scientists, and other quantitative researchers from non-actuarial backgrounds.
+
+## Theory
+
+**TO ADD THEORY ABOUT MACHINE LEARNING HERE**
+
+### Machine learning topics
+
+### Machine learning from data
+
+### Supervised machine learning
+
+### Unsupervised machine learning
+
+### Penalised regression
+
+### Decision trees
+
+### Perspectives of non-actuarial professionals
+
+## `R` Practice
+
+```{r 15-machine-learning-01, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-# Theory
-
-**TO ADD THEORY ABOUT CLUSTERING HERE**
-
-# `R` Practice
 
 We are managing a `portfolio` of investments that contains 200 assets. In this `portfolio` we measure the following features:
 
@@ -31,10 +39,10 @@ We are managing a `portfolio` of investments that contains 200 assets. In this `
 
 We replicate this in `R` as follows:
 
-```{r dummy-setup, message=FALSE}
+```{r 15-machine-learning-02, message=FALSE}
 library(dplyr) # Data manipulation
 
-set.seed(2019) # Fix result
+set.seed(42) # Fix result
 portfolio <- data.frame(
   x1 = rnorm(200, 3, 1),
   x2 = scale(
@@ -54,7 +62,7 @@ Next we want to explore whether these 200 assets can be divided into two cluster
 
 We will first assign the assets evenly into these two clusters:
 
-```{r naive-cluster}
+```{r 15-machine-learning-03}
 group_label_stage1 <- c(
   rep("A", 100),
   rep("B", 100)
@@ -93,7 +101,7 @@ The Euclidean distance is defined as:
 * For `dist_A`: $\sqrt{(x1-x1_A)^2+(x2-x2_A)^2}$, and
 * For `dist_B`: $\sqrt{(x1-x1_B)^2+(x2-x2_B)^2}$.
 
-```{r euclidean-distance}
+```{r 15-machine-learning-04}
 dist_A <- sqrt(
   (portfolio$x1 - ClusterACentre[1])^2 
   + (portfolio$x2 - ClusterACentre[2])^2 
@@ -115,7 +123,7 @@ glimpse(portfolio)
 
 Now we will update the cluster labels (`A` and `B`) by assigning to each asset the label of the cluster  whose centre is nearest from `dist_A` and `dist_B`.
 
-```{r euclid-cluster}
+```{r 15-machine-learning-05}
 portfolio <- portfolio %>% 
   mutate(
     group_label_stage2 = ifelse(portfolio$dist_A <= portfolio$dist_B, "A", "B")
@@ -126,7 +134,7 @@ glimpse(portfolio)
 
 Let's generate a 2x2 matrix showing the number of assets with each possible combination of values from `group_label_stage1` and `group_label_stage2`:
 
-```{r matrix-combos}
+```{r 15-machine-learning-06}
 combos <- portfolio %>% 
   count(group_label_stage1, group_label_stage2)
 
@@ -142,7 +150,7 @@ matrix(
 
 Finally let's plot `x1` and `x2` coloured using the latest clustering labelling:
 
-```{r plot}
+```{r 15-machine-learning-07}
 library(ggplot2)
 
 portfolio %>% 

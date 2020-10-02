@@ -1,0 +1,94 @@
+# Loss distributions {#loss-distributions}
+
+```{r 02-loss-distributions-01, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Learning Objectives
+
+1. Describe the properties of the statistical distributions which are suitable for modelling individual and aggregate losses.
+2. Explain the concepts of excesses, deductibles and retention limits.
+3. Describe the operation of proportional and excess of loss reinsurance.
+4. Derive the distribution and corresponding moments of the claim amounts paid by the insurer and the reinsurer in the presence of excesses (deductibles) and reinsurance.
+5. Estimate the parameters of a failure time or loss distribution when the data is complete, or when it is incomplete, using maximum likelihood and the method of moments.
+6. Fit a statistical distribution to a dataset and calculate appropriate goodness of fit measures.
+
+## Theory
+
+**TO ADD THEORY ABOUT LOSS DISTRIBUTIONS HERE**
+
+### Probability distributions for modelling insurance losses
+
+### Mechanisms for limiting insurance losses
+
+### Proportional and Excess of Loss reinsurance
+
+### Estimating parameters of loss distributions with complete data
+
+### Estimating parameters of loss distributions with incomplete data
+
+## `R` Practice
+
+We are investigating the reinsurance arrangement of 1,000 insurance claims named `X` with the following characteristics:
+
+* $X \sim Exp(0.01)$
+* Unlimited excess of loss reinsurance, with a retention level of $M = 400$
+
+```{r 02-loss-distributions-02, message=FALSE}
+library(dplyr) # Data manipulation
+
+set.seed(1027) # Fix result
+X <- rexp(
+  n = 1000,
+  rate = 0.01
+)
+
+M <- 400
+
+summary(X)
+```
+We want to determine the proportion of claims that are fully covered by the insurer:
+
+```{r 02-loss-distributions-03}
+
+Proportion <- sum(X <= M) / length(X)
+
+```
+
+The proportion of claims that are fully covered by the insurer is `r paste0(round(Proportion * 100,3),"%")`.
+
+Next, for each claim, we want to calculate the net (_of reinsurance_) amount paid by the insurer. We will record this in a vector called `Y`:
+
+```{r 02-loss-distributions-04}
+Y <- ifelse(X > M, M, X)
+
+summary(Y)
+```
+
+Likewise, for each claim, we want to calculate the amount paid by the **re**insurer. We will record this in a vector called `Z`:
+
+```{r 02-loss-distributions-05}
+Z <- ifelse(X > M, X - M, 0)
+
+summary(Z)
+```
+Now let us assume that the underlying gross claims distribution follows an exponential distribution of some unknown rate $\lambda$. We will estimate $\lambda$ using only the retained claim amounts which we have recorded in vector `Y`.
+
+First let's calculate the log-likelihood as a function of the parameter $\lambda$ and claims data `Y`:
+
+```{r 02-loss-distributions-06}
+#TO DO
+```
+
+We now determine the value of $\lambda$ at which the log-likelihood function reaches its maximum:
+
+```{r 02-loss-distributions-07}
+#TO DO
+```
+
+Finally let's plot the results:
+
+```{r 02-loss-distributions-08}
+library(ggplot2)
+#TO DO
+```

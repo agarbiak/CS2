@@ -1,0 +1,30 @@
+bookdown::gitbook:
+  css: css/style.css
+  config:
+    toc:
+      collapse: subsection
+      scroll_highlight: yes
+      before: |
+        <li><a href="./">Risk Modelling and Survival Analysis</a></li>
+      after: |
+        <li><a href="https://github.com/agarbiak" target="blank">A book by Alex Garbiak</a></li>
+    toolbar:
+      position: fixed
+    edit:
+      link: https://github.com/agarbiak/CS2/edit/master/%s
+      text: "Edit"
+    search: yes
+    fontsettings:
+      theme: white
+      family: sans
+      size: 2
+    sharing:
+      facebook: no
+      github: yes
+      twitter: yes
+      linkedin: yes
+      weibo: no
+      instapaper: no
+      vk: no
+      all: ["twitter", "linkedin"]
+    info: yes

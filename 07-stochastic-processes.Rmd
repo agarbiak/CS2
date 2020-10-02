@@ -1,0 +1,38 @@
+# Stochastic processes {#stochastic-processes}
+
+```{r 07-stochastic-processes-01, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Learning Objectives
+
+1. Define in general terms a stochastic process and in particular a counting process.
+2. Classify a stochastic process.
+3. Describe possible applications of mixed processes.
+4. Explain what is meant by the Markov property in the context of a stochastic process and in terms of filtrations.
+
+## Theory
+
+**TO ADD THEORY ABOUT STOCHASTIC PROCESSES HERE**
+
+### Defining stochastic process
+
+#### Defining a counting process
+
+### Classifying stochastic processes
+
+#### Time basis
+
+Continous or discrete time
+
+#### State space
+
+Continous or discrete state space
+
+#### Mixed type stochastic process
+
+### Applications of mixed processes
+
+## `R` Practice
+
+**TO ADD R EXAMPLE ABOUT STOCHASTIC PROCESSES HERE**

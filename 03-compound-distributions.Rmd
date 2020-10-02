@@ -1,0 +1,33 @@
+# Compound loss distributions {#compound-distributions}
+
+```{r 03-compound-distributions-01, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Learning Objectives
+
+1. Construct models appropriate for short term insurance contracts in terms of the numbers of claims and the amounts of individual claims.
+2. Describe the major simplifying assumptions underlying such models.
+3. Define a compound Poisson distribution and show that the sum of independent random variables each having a compound Poisson distribution also has a compound Poisson distribution.
+4. Derive the mean, variance and coefficient of skewness for compound binomial, compound Poisson and compound negative binomial random variables.
+5. Repeat this for both the insurer and the reinsurer after the operation of simple forms of proportional and excess of loss reinsurance.
+
+## Theory
+
+**TO ADD THEORY ABOUT COMPOUND MODELLING HERE**
+
+### Modelling frequency of insurance claims
+
+### Modelling severity of insurance claims
+
+### Compound loss distributions
+
+#### Compound binomial
+
+#### Compound Poisson
+
+#### Compound negative binomial
+
+### Compound loss distributions after reinsurance
+
+## `R` Practice
