@@ -4,7 +4,7 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Learning Objectives
+## Learning Objectives {#id-06-learning-objectives}
 
 1. Explain the concept and general properties of stationary, $I(0)$, and integrated, $I(1)$, univariate time series.
 2. Explain the concept of a stationary random series.
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 7. Explain the basic concept of a multivariate autoregressive model.
 8. Explain the concept of cointegrated time series.
 
-## Theory
+## Theory {#id-06-theory}
 
 **TO ADD THEORY ABOUT TIME SERIES HERE**
 
@@ -35,6 +35,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Concept of cointegrated time series
 
-## `R` Practice
+## `R` Practice {#id-06-practice}
 
 **TO ADD R EXAMPLE ABOUT TIME SERIES HERE**

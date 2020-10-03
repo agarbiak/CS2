@@ -4,7 +4,7 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Learning Objectives
+## Learning Objectives {#id-09-learning-objectives}
 
 1. State the essential features of a Markov process model.
 2. Define a Poisson process, derive the distribution of the number of events in a given time interval, derive the distribution of inter-event times, and apply these results.
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 6. Describe sickness and marriage models in terms of duration dependent Markov processes and describe other simple applications.
 7. Demonstrate how Markov jump processes can be used as a tool for modelling and how they can be simulated.
 
-## Theory
+## Theory {#id-09-theory}
 
 **TO ADD THEORY ABOUT MARKOV PROCESSES HERE**
 
@@ -36,6 +36,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #### Simulating a Markov jump process
 
-## `R` Practice
+## `R` Practice {#id-09-practice}
 
 **TO ADD R EXAMPLE ABOUT MARKOV PROCESSES HERE**

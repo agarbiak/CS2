@@ -4,14 +4,14 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Learning Objectives
+## Learning Objectives {#id-07-learning-objectives}
 
 1. Define in general terms a stochastic process and in particular a counting process.
 2. Classify a stochastic process.
 3. Describe possible applications of mixed processes.
 4. Explain what is meant by the Markov property in the context of a stochastic process and in terms of filtrations.
 
-## Theory
+## Theory {#id-07-theory}
 
 **TO ADD THEORY ABOUT STOCHASTIC PROCESSES HERE**
 
@@ -33,6 +33,6 @@ Continous or discrete state space
 
 ### Applications of mixed processes
 
-## `R` Practice
+## `R` Practice {#id-07-practice}
 
 **TO ADD R EXAMPLE ABOUT STOCHASTIC PROCESSES HERE**

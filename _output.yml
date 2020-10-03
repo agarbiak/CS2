@@ -11,7 +11,7 @@ bookdown::gitbook:
     toolbar:
       position: fixed
     edit:
-      link: https://github.com/agarbiak/CS2/edit/master/%s
+      link: https://github.com/agarbiak/CS2/edit/main/%s
       text: "Edit"
     search: yes
     fontsettings:

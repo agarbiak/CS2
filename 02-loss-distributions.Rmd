@@ -1,10 +1,10 @@
-# Loss distributions {#loss-distributions}
+# Loss distributions
 
 ```{r 02-loss-distributions-01, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Learning Objectives
+## Learning Objectives {#id-02-learning-objectives}
 
 1. Describe the properties of the statistical distributions which are suitable for modelling individual and aggregate losses.
 2. Explain the concepts of excesses, deductibles and retention limits.
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 5. Estimate the parameters of a failure time or loss distribution when the data is complete, or when it is incomplete, using maximum likelihood and the method of moments.
 6. Fit a statistical distribution to a dataset and calculate appropriate goodness of fit measures.
 
-## Theory
+## Theory {#id-02-theory}
 
 **TO ADD THEORY ABOUT LOSS DISTRIBUTIONS HERE**
 
@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Estimating parameters of loss distributions with incomplete data
 
-## `R` Practice
+## `R` Practice {#id-02-practice}
 
 We are investigating the reinsurance arrangement of 1,000 insurance claims named `X` with the following characteristics:
 
