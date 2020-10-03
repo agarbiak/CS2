@@ -4,7 +4,7 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Learning Objectives
+## Learning Objectives {#id-08-learning-objectives}
 
 1. State the essential features of a Markov chain model.
 2. State the Chapman-Kolmogorov equations that represent a Markov chain.
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 5. Describe a time-inhomogeneous Markov chain model and describe simple applications.
 6. Demonstrate how Markov chains can be used as a tool for modelling and how they can be simulated.
 
-## Theory
+## Theory {#id-08-theory}
 
 **TO ADD THEORY ABOUT MARKOV CHAINS HERE**
 
@@ -31,6 +31,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #### Simulating a Markov chain
 
-## `R` Practice
+## `R` Practice {#id-08-practice}
 
 **TO ADD R EXAMPLE ABOUT MARKOV CHAINS HERE**

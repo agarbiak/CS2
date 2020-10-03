@@ -13,11 +13,11 @@ description: "Risk modelling and survival analysis for actuaries providing R cod
 favicon: img/favicon.ico
 ---
 
-# Introduction
+# Introduction {#id-00-intro}
 
-This book is **unpublished** and should be considered an **early build** version.
+This book is **unpublished** and should be considered an **early build** version. There will be **bugs**, **typos** and **errors**. Please report them [here](https://github.com/agarbiak/CS2/issues).
 
-## Motivation 
+## Motivation {#id-00-motivation}
 
 The purpose of this book is to help actuaries studying [Risk Modelling and Survival Analysis (CS2)](https://www.actuaries.org.uk/studying/curriculum/actuarial-statistics) from the Institute and Faculty of Actuaries by providing `R` code examples across the following topic areas:
 

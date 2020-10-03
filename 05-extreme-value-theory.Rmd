@@ -4,12 +4,12 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Learning Objectives
+## Learning Objectives {#id-05-learning-objectives}
 
 1. Recognise extreme value distributions, suitable for modelling the distribution of severity of loss and their relationships.
 2. Calculate various measures of tail weight and interpret the results to compare the tail weights.
 
-## Theory
+## Theory {#id-05-theory}
 
 **TO ADD THEORY ABOUT EXTREME VALUE THEORY HERE**
 
@@ -17,4 +17,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Calcuating and interpreting tail weights
 
-## `R` Practice
+## `R` Practice {#id-05-practice}

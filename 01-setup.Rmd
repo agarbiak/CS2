@@ -1,5 +1,5 @@
-# R Setup {#setup}
+# R Setup {#id-01-setup}
 
-## Preparing your environment
+## Preparing your environment {#id-01-environment}
 
 The Institute and Faculty of Actuaries have provided their [own guide](https://www.actuaries.org.uk/system/files/field/document/R-Guide_technical.pdf) to getting up and running with `R`.
