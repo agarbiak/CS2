@@ -1,6 +1,6 @@
 # Machine learning
 
-## Learning Objectives {#id-15-learning-objectives}
+## Learning Objectives {-#objectives-15}
 
 1. Explain the main branches of machine learning and describe examples of the types of problems typically addressed by machine learning.
 2. Explain and apply high-level concepts relevant to learning from data.
@@ -8,25 +8,25 @@
 4. Explain in detail and use appropriate software to apply machine learning techniques (e.g. penalised regression and decision trees) to simple problems.
 5. Demonstrate an understanding of the perspectives of statisticians, data scientists, and other quantitative researchers from non-actuarial backgrounds.
 
-## Theory {#id-15-theory}
+## Theory {-#theory-15}
 
 **TO ADD THEORY ABOUT MACHINE LEARNING HERE**
 
-### Machine learning topics
+## Machine learning topics
 
-### Machine learning from data
+## Machine learning from data
 
-### Supervised machine learning
+## Supervised machine learning
 
-### Unsupervised machine learning
+## Unsupervised machine learning
 
-### Penalised regression
+## Penalised regression
 
-### Decision trees
+## Decision trees
 
-### Perspectives of non-actuarial professionals
+## Perspectives of non-actuarial professionals
 
-## `R` Practice {#id-15-practice}
+## `R` Practice {-#practice-15}
 
 ```{r 15-machine-learning-01, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

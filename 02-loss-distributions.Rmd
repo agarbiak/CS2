@@ -1,10 +1,6 @@
 # Loss distributions
 
-```{r 02-loss-distributions-01, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Learning Objectives {#id-02-learning-objectives}
+## Learning Objectives {-#objectives-loss-distributions}
 
 1. Describe the properties of the statistical distributions which are suitable for modelling individual and aggregate losses.
 2. Explain the concepts of excesses, deductibles and retention limits.
@@ -13,31 +9,54 @@ knitr::opts_chunk$set(echo = TRUE)
 5. Estimate the parameters of a failure time or loss distribution when the data is complete, or when it is incomplete, using maximum likelihood and the method of moments.
 6. Fit a statistical distribution to a dataset and calculate appropriate goodness of fit measures.
 
-## Theory {#id-02-theory}
+## Theory {-#theory-loss-distributions}
 
-**TO ADD THEORY ABOUT LOSS DISTRIBUTIONS HERE**
+`R` was designed to be used for statistical computing - so it handles **randomness** well!
 
-### Probability distributions for modelling insurance losses
+```{r loss-distributions-randomness}
+set.seed(42) # Fixes result
+die_throws <- sample(1:6, 10000, replace = TRUE)
+mean(die_throws)
+```
 
-### Mechanisms for limiting insurance losses
+## Probability distributions for modelling insurance losses
 
-### Proportional and Excess of Loss reinsurance
+`R` has in-built functions for probability distributions:
 
-### Estimating parameters of loss distributions with complete data
+- **d***\<distribution-name\>* $:=$ **d**ensity (PDF), *i.e.* $f_X(x)$
+- **p***\<distribution-name\>* $:=$ **p**robability distribution cumulative function (CDF), *i.e.* $F_X(x) =\boldsymbol{P}(X \leq x)$
+- **q***\<distribution-name\>* $:=$ **q**uantile function, *i.e.* return $x$ such that $\boldsymbol{P}(X \leq x) = p$
+- **r***\<distribution-name\>* $:=$ **r**andom deviates, *i.e.* (*psuedo*) random number generator for a given distribution
+- *Where \<distribution-name\>* $=$ Normal, uniform, lognormal, Student's t, Poisson, binormal, Weibull ... see `?distributions()`{.R} for more information
 
-### Estimating parameters of loss distributions with incomplete data
+| R Code | Definition |
+|-|-|
+| `rnorm(1)`{.R} | Generates $x_1$ where $X \sim \mathcal{N}(0,\,1)$ |
+| `rnorm(y, mean=10, sd=2)`{.R} | Generates $\{y_1,\,y_2,\,\dots\}$ with $Y \sim \mathcal{N}(10,\,2^2)$ |
+| `runif(3, min=5, max=10)`{.R} | Generates $\{z_1,\,z_2,\,z_3\}$  where $Z \sim \mathcal{U}(5,\,10)$ |
+| `dbinom(4, size=5, prob=0.5)`{.R} | Computes $\boldsymbol{P}(X = 4)$ where $X \sim \mathcal{Bin}(5,\,0.5)$ |
+| `pgamma(0.2, shape=2, rate=2)`{.R} | Computes $F_Y(0.2)$ where $Y \sim \mathcal{\Gamma}(2,\,2)$, i.e.  $\boldsymbol{P}(Y\leq 0.2)$|
+| `qexp(0.5, rate = 2)`{.R} | Determines smallest value of $z$ for $\boldsymbol{P}(Z \leq z) = 0.5$ where $Z \sim Exp(2)$ |
 
-## `R` Practice {#id-02-practice}
+## Mechanisms for limiting insurance losses
+
+## Proportional and Excess of Loss reinsurance
+
+## Estimating parameters of loss distributions with complete data
+
+## Estimating parameters of loss distributions with incomplete data
+
+## `R` Practice {-#practice-loss-distributions}
 
 We are investigating the reinsurance arrangement of 1,000 insurance claims named `X` with the following characteristics:
 
 * $X \sim Exp(0.01)$
 * Unlimited excess of loss reinsurance, with a retention level of $M = 400$
 
-```{r 02-loss-distributions-02, message=FALSE}
+```{r loss-distributions-X, message=FALSE}
 library(dplyr) # Data manipulation
 
-set.seed(1027) # Fix result
+set.seed(42) # Fix result
 X <- rexp(
   n = 1000,
   rate = 0.01
@@ -49,7 +68,7 @@ summary(X)
 ```
 We want to determine the proportion of claims that are fully covered by the insurer:
 
-```{r 02-loss-distributions-03}
+```{r loss-distributions-proportion}
 
 Proportion <- sum(X <= M) / length(X)
 
@@ -59,7 +78,7 @@ The proportion of claims that are fully covered by the insurer is `r paste0(roun
 
 Next, for each claim, we want to calculate the net (_of reinsurance_) amount paid by the insurer. We will record this in a vector called `Y`:
 
-```{r 02-loss-distributions-04}
+```{r loss-distributions-Y}
 Y <- ifelse(X > M, M, X)
 
 summary(Y)
@@ -67,7 +86,7 @@ summary(Y)
 
 Likewise, for each claim, we want to calculate the amount paid by the **re**insurer. We will record this in a vector called `Z`:
 
-```{r 02-loss-distributions-05}
+```{r loss-distributions-Z}
 Z <- ifelse(X > M, X - M, 0)
 
 summary(Z)
@@ -76,19 +95,19 @@ Now let us assume that the underlying gross claims distribution follows an expon
 
 First let's calculate the log-likelihood as a function of the parameter $\lambda$ and claims data `Y`:
 
-```{r 02-loss-distributions-06}
+```{r loss-distributions-loglikelihood-function}
 #TO DO
 ```
 
 We now determine the value of $\lambda$ at which the log-likelihood function reaches its maximum:
 
-```{r 02-loss-distributions-07}
+```{r loss-distributions-loglikelihood-lambda}
 #TO DO
 ```
 
 Finally let's plot the results:
 
-```{r 02-loss-distributions-08}
+```{r loss-distributions-plot}
 library(ggplot2)
 #TO DO
 ```

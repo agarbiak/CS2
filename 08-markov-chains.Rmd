@@ -1,10 +1,6 @@
-# Markov chains {#markov-chains}
+# Markov chains
 
-```{r 08-markov-chains-02, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Learning Objectives {#id-08-learning-objectives}
+## Learning Objectives {-#objectives-markov-chains}
 
 1. State the essential features of a Markov chain model.
 2. State the Chapman-Kolmogorov equations that represent a Markov chain.
@@ -13,24 +9,24 @@ knitr::opts_chunk$set(echo = TRUE)
 5. Describe a time-inhomogeneous Markov chain model and describe simple applications.
 6. Demonstrate how Markov chains can be used as a tool for modelling and how they can be simulated.
 
-## Theory {#id-08-theory}
+## Theory {-#theory-markov-chains}
 
 **TO ADD THEORY ABOUT MARKOV CHAINS HERE**
 
-### Features of a Markov chain model
+## Features of a Markov chain model
 
-### Chapman-Kolmogorov equations
+## Chapman-Kolmogorov equations
 
-### Stationary distribution for a Markov chain
+## Stationary distribution for a Markov chain
 
-### Frequency based experience rating
+## Frequency based experience rating
 
-### Time-inhomogeneous Markov chain model
+## Time-inhomogeneous Markov chain model
 
-### Markov chains in modelling
+## Markov chains in modelling
 
-#### Simulating a Markov chain
+### Simulating a Markov chain
 
-## `R` Practice {#id-08-practice}
+## `R` Practice {-#practice-markov-chains}
 
 **TO ADD R EXAMPLE ABOUT MARKOV CHAINS HERE**

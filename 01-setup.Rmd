@@ -1,5 +1,102 @@
 # R Setup
 
-## Preparing your environment {#id-01-environment}
+## Preparing your environment
 
 The Institute and Faculty of Actuaries have provided their [own guide](https://www.actuaries.org.uk/system/files/field/document/R-Guide_technical.pdf) to getting up and running with `R`.
+
+The steps to have `R` working is dependant on your operating system. Thankfully the following resources _should_ allow for your local installation of `R` to be relatively painless:
+
+1. Download and install `R` from [CRAN](https://cran.rstudio.com/)^[CRAN is the The Comprehensive R Archive Network - read more on the [CRAN](https://cran.rstudio.com/) website].
+2. Download and install an integrated development environment, I recommend [RStudio Desktop](https://rstudio.com/products/rstudio/download/#download).
+
+## Basic interations with R
+
+`R` prefers **vectorised** operations (over concepts like for loops)
+
+```{r setup-vector-intro}
+# This is the syntax for comments in R
+(1:10) + 2 # Notice how we add element-wise in R
+```
+
+We **assign** values to **variables** using the `<-` *("assignment")* operator^[We can also assign values using the more familiar `=` symbol. In general this is discouraged, listen to [Hadley Wickham](https://style.tidyverse.org/syntax.html#assignment-1).].
+
+```{r setup-vector-variable, collapse=TRUE}
+x <- 1:10
+y <- x + 2
+x <- x + x # Notice that we can re-assign values to variables
+z <- x + 2
+y
+z
+```
+
+Even though $z$ is assigned the same way as we assigned $y$, note that $y \neq z$ so execution order matters in `R`
+
+We now add **functions** to the `R` code which has the form `function_name(arguments = "values", ...)`{.R}
+
+```{r setup-function}
+# Combine function, used often to create vectors:
+x <- c(1:3, 6:20, 21:42) 
+# Another function with arguments:
+y <- sample(x, size = 3)
+y
+```
+
+Let's create a **matrix** in `R`
+
+*Note:* **Matrix multiplication** requires the `%*%` syntax
+
+```{r setup-matrix}
+first_matrix <- matrix(1:9, byrow = TRUE, nrow = 3)
+first_matrix %*% first_matrix
+```
+
+A `data.frame` is a very popular data structure used in `R`. Each input variable has to have the same length but can be of different types (*strings, integers, booleans, etc.*).
+
+```{r setup-dataframe}
+# Input vectors for the data.frame
+name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+surface_gravity <- c(0.38, 0.904, 1, 0.3794, 2.528, 1.065, 0.886, 1.14)
+# Create a data.frame from the vectors
+solar_system <- data.frame(name, surface_gravity)
+str(solar_system)
+```
+
+R has built in logic expressions:
+
+| Operator | Description |
+|-|-|
+| < (<=) | less than (or equal to) |
+| > (>=) | greater than (or equal to) |
+| == | exactly equal to |
+| ! | NOT |
+| & | AND (*element-wise*) |
+| \| | OR (*element-wise*) |
+| != | not equal to |
+
+
+We can use logical expressions to effectively filter data
+
+Here we **subset** the data using the `[...]`{.R} syntax
+```{r setup-subsetting}
+x <- 1:10
+x[x != 5 & x < 7]
+```
+
+
+We can select objects using the **\$** symbol - see `?Extract`{.R} for more help here
+
+```{r setup-selecting}
+#data.frame[rows to select, columns to select]
+solar_system[solar_system$name == "Jupiter", c(1:2)]
+```
+
+We can extend `R`'s functionality by loading **packages**:
+
+```{r setup-packages}
+# Load the ggplot2 package
+library(ggplot2)
+```
+
+- Did you get an error from `R` trying this?
+- To load packages they need to be **installed** first:
+- `install.packages("ggplot2")`{.R}
