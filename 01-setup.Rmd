@@ -1,4 +1,4 @@
-# R Setup {#id-01-setup}
+# R Setup
 
 ## Preparing your environment {#id-01-environment}
 
