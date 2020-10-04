@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 Markov processes | Risk Modelling and Survival Analysis</title>
+  <title>Chapter 9 Markov processes | Risk Modelling and Survival Analysis</title>
   <meta name="description" content="Risk modelling and survival analysis for actuaries providing R code examples." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 Markov processes | Risk Modelling and Survival Analysis" />
+  <meta property="og:title" content="Chapter 9 Markov processes | Risk Modelling and Survival Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="agarbiak/CS2" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 Markov processes | Risk Modelling and Survival Analysis" />
+  <meta name="twitter:title" content="Chapter 9 Markov processes | Risk Modelling and Survival Analysis" />
   
   <meta name="twitter:description" content="Risk modelling and survival analysis for actuaries providing R code examples." />
   
@@ -133,114 +133,124 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Risk Modelling and Survival Analysis</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#id-00-motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#motivation"><i class="fa fa-check"></i>Motivation</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="id-01-setup.html"><a href="id-01-setup.html"><i class="fa fa-check"></i><b>2</b> R Setup</a><ul>
-<li class="chapter" data-level="2.1" data-path="id-01-setup.html"><a href="id-01-setup.html#id-01-environment"><i class="fa fa-check"></i><b>2.1</b> Preparing your environment</a></li>
+<li class="chapter" data-level="1" data-path="r-setup.html"><a href="r-setup.html"><i class="fa fa-check"></i><b>1</b> R Setup</a><ul>
+<li class="chapter" data-level="1.1" data-path="r-setup.html"><a href="r-setup.html#preparing-your-environment"><i class="fa fa-check"></i><b>1.1</b> Preparing your environment</a></li>
+<li class="chapter" data-level="1.2" data-path="r-setup.html"><a href="r-setup.html#basic-interations-with-r"><i class="fa fa-check"></i><b>1.2</b> Basic interations with R</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="loss-distributions.html"><a href="loss-distributions.html"><i class="fa fa-check"></i><b>3</b> Loss distributions</a><ul>
-<li class="chapter" data-level="3.1" data-path="loss-distributions.html"><a href="loss-distributions.html#id-02-learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="3.2" data-path="loss-distributions.html"><a href="loss-distributions.html#id-02-theory"><i class="fa fa-check"></i><b>3.2</b> Theory</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="loss-distributions.html"><a href="loss-distributions.html#probability-distributions-for-modelling-insurance-losses"><i class="fa fa-check"></i><b>3.2.1</b> Probability distributions for modelling insurance losses</a></li>
-<li class="chapter" data-level="3.2.2" data-path="loss-distributions.html"><a href="loss-distributions.html#mechanisms-for-limiting-insurance-losses"><i class="fa fa-check"></i><b>3.2.2</b> Mechanisms for limiting insurance losses</a></li>
-<li class="chapter" data-level="3.2.3" data-path="loss-distributions.html"><a href="loss-distributions.html#proportional-and-excess-of-loss-reinsurance"><i class="fa fa-check"></i><b>3.2.3</b> Proportional and Excess of Loss reinsurance</a></li>
-<li class="chapter" data-level="3.2.4" data-path="loss-distributions.html"><a href="loss-distributions.html#estimating-parameters-of-loss-distributions-with-complete-data"><i class="fa fa-check"></i><b>3.2.4</b> Estimating parameters of loss distributions with complete data</a></li>
-<li class="chapter" data-level="3.2.5" data-path="loss-distributions.html"><a href="loss-distributions.html#estimating-parameters-of-loss-distributions-with-incomplete-data"><i class="fa fa-check"></i><b>3.2.5</b> Estimating parameters of loss distributions with incomplete data</a></li>
+<li class="chapter" data-level="2" data-path="loss-distributions.html"><a href="loss-distributions.html"><i class="fa fa-check"></i><b>2</b> Loss distributions</a><ul>
+<li class="chapter" data-level="" data-path="loss-distributions.html"><a href="loss-distributions.html#objectives-loss-distributions"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="loss-distributions.html"><a href="loss-distributions.html#theory-loss-distributions"><i class="fa fa-check"></i>Theory</a></li>
+<li class="chapter" data-level="2.1" data-path="loss-distributions.html"><a href="loss-distributions.html#probability-distributions-for-modelling-insurance-losses"><i class="fa fa-check"></i><b>2.1</b> Probability distributions for modelling insurance losses</a></li>
+<li class="chapter" data-level="2.2" data-path="loss-distributions.html"><a href="loss-distributions.html#mechanisms-for-limiting-insurance-losses"><i class="fa fa-check"></i><b>2.2</b> Mechanisms for limiting insurance losses</a></li>
+<li class="chapter" data-level="2.3" data-path="loss-distributions.html"><a href="loss-distributions.html#proportional-and-excess-of-loss-reinsurance"><i class="fa fa-check"></i><b>2.3</b> Proportional and Excess of Loss reinsurance</a></li>
+<li class="chapter" data-level="2.4" data-path="loss-distributions.html"><a href="loss-distributions.html#estimating-parameters-of-loss-distributions-with-complete-data"><i class="fa fa-check"></i><b>2.4</b> Estimating parameters of loss distributions with complete data</a></li>
+<li class="chapter" data-level="2.5" data-path="loss-distributions.html"><a href="loss-distributions.html#estimating-parameters-of-loss-distributions-with-incomplete-data"><i class="fa fa-check"></i><b>2.5</b> Estimating parameters of loss distributions with incomplete data</a></li>
+<li><a href="loss-distributions.html#practice-loss-distributions"><code>R</code> Practice</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="loss-distributions.html"><a href="loss-distributions.html#id-02-practice"><i class="fa fa-check"></i><b>3.3</b> <code>R</code> Practice</a></li>
+<li class="chapter" data-level="3" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html"><i class="fa fa-check"></i><b>3</b> Compound loss distributions</a><ul>
+<li class="chapter" data-level="" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html#objectives-compound-loss-distributions"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html#theory-compound-loss-distributions"><i class="fa fa-check"></i>Theory</a></li>
+<li class="chapter" data-level="3.1" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html#modelling-frequency-of-insurance-claims"><i class="fa fa-check"></i><b>3.1</b> Modelling frequency of insurance claims</a></li>
+<li class="chapter" data-level="3.2" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html#modelling-severity-of-insurance-claims"><i class="fa fa-check"></i><b>3.2</b> Modelling severity of insurance claims</a></li>
+<li class="chapter" data-level="3.3" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html#compound-loss-distributions-1"><i class="fa fa-check"></i><b>3.3</b> Compound loss distributions</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html#compound-binomial"><i class="fa fa-check"></i><b>3.3.1</b> Compound binomial</a></li>
+<li class="chapter" data-level="3.3.2" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html#compound-poisson"><i class="fa fa-check"></i><b>3.3.2</b> Compound Poisson</a></li>
+<li class="chapter" data-level="3.3.3" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html#compound-negative-binomial"><i class="fa fa-check"></i><b>3.3.3</b> Compound negative binomial</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="compound-distributions.html"><a href="compound-distributions.html"><i class="fa fa-check"></i><b>4</b> Compound loss distributions</a><ul>
-<li class="chapter" data-level="4.1" data-path="compound-distributions.html"><a href="compound-distributions.html#id-03-learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="4.2" data-path="compound-distributions.html"><a href="compound-distributions.html#id-03-theory"><i class="fa fa-check"></i><b>4.2</b> Theory</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="compound-distributions.html"><a href="compound-distributions.html#modelling-frequency-of-insurance-claims"><i class="fa fa-check"></i><b>4.2.1</b> Modelling frequency of insurance claims</a></li>
-<li class="chapter" data-level="4.2.2" data-path="compound-distributions.html"><a href="compound-distributions.html#modelling-severity-of-insurance-claims"><i class="fa fa-check"></i><b>4.2.2</b> Modelling severity of insurance claims</a></li>
-<li class="chapter" data-level="4.2.3" data-path="compound-distributions.html"><a href="compound-distributions.html#compound-loss-distributions"><i class="fa fa-check"></i><b>4.2.3</b> Compound loss distributions</a></li>
-<li class="chapter" data-level="4.2.4" data-path="compound-distributions.html"><a href="compound-distributions.html#compound-loss-distributions-after-reinsurance"><i class="fa fa-check"></i><b>4.2.4</b> Compound loss distributions after reinsurance</a></li>
+<li class="chapter" data-level="3.4" data-path="compound-loss-distributions.html"><a href="compound-loss-distributions.html#compound-loss-distributions-after-reinsurance"><i class="fa fa-check"></i><b>3.4</b> Compound loss distributions after reinsurance</a></li>
+<li><a href="compound-loss-distributions.html#practice-compound-loss-distributions"><code>R</code> Practice</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="compound-distributions.html"><a href="compound-distributions.html#id-03-practice"><i class="fa fa-check"></i><b>4.3</b> <code>R</code> Practice</a></li>
+<li class="chapter" data-level="4" data-path="copulas.html"><a href="copulas.html"><i class="fa fa-check"></i><b>4</b> Copulas</a><ul>
+<li class="chapter" data-level="" data-path="copulas.html"><a href="copulas.html#objectives-copulas"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="copulas.html"><a href="copulas.html#theory-copulas"><i class="fa fa-check"></i>Theory</a><ul>
+<li class="chapter" data-level="4.0.1" data-path="copulas.html"><a href="copulas.html#characteristics-of-a-copula"><i class="fa fa-check"></i><b>4.0.1</b> Characteristics of a copula</a></li>
+<li class="chapter" data-level="4.0.2" data-path="copulas.html"><a href="copulas.html#gaussian-copula"><i class="fa fa-check"></i><b>4.0.2</b> Gaussian copula</a></li>
+<li class="chapter" data-level="4.0.3" data-path="copulas.html"><a href="copulas.html#archimedan-family-of-copulas"><i class="fa fa-check"></i><b>4.0.3</b> Archimedan family of copulas</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="copulas.html"><a href="copulas.html"><i class="fa fa-check"></i><b>5</b> Copulas</a><ul>
-<li class="chapter" data-level="5.1" data-path="copulas.html"><a href="copulas.html#id-04-learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="5.2" data-path="copulas.html"><a href="copulas.html#id-04-theory"><i class="fa fa-check"></i><b>5.2</b> Theory</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="copulas.html"><a href="copulas.html#characteristics-of-a-copula"><i class="fa fa-check"></i><b>5.2.1</b> Characteristics of a copula</a></li>
-<li class="chapter" data-level="5.2.2" data-path="copulas.html"><a href="copulas.html#gaussian-copula"><i class="fa fa-check"></i><b>5.2.2</b> Gaussian copula</a></li>
-<li class="chapter" data-level="5.2.3" data-path="copulas.html"><a href="copulas.html#archimedan-family-of-copulas"><i class="fa fa-check"></i><b>5.2.3</b> Archimedan family of copulas</a></li>
+<li><a href="copulas.html#practice-copulas"><code>R</code> Practice</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="copulas.html"><a href="copulas.html#id-04-practice"><i class="fa fa-check"></i><b>5.3</b> <code>R</code> Practice</a></li>
+<li class="chapter" data-level="5" data-path="extreme-value-theory.html"><a href="extreme-value-theory.html"><i class="fa fa-check"></i><b>5</b> Extreme value theory</a><ul>
+<li class="chapter" data-level="" data-path="extreme-value-theory.html"><a href="extreme-value-theory.html#objectives-evt"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="extreme-value-theory.html"><a href="extreme-value-theory.html#theory-evt"><i class="fa fa-check"></i>Theory</a></li>
+<li class="chapter" data-level="5.1" data-path="extreme-value-theory.html"><a href="extreme-value-theory.html#extreme-value-distributions"><i class="fa fa-check"></i><b>5.1</b> Extreme value distributions</a></li>
+<li class="chapter" data-level="5.2" data-path="extreme-value-theory.html"><a href="extreme-value-theory.html#calcuating-and-interpreting-tail-weights"><i class="fa fa-check"></i><b>5.2</b> Calcuating and interpreting tail weights</a></li>
+<li><a href="extreme-value-theory.html#practice-evt"><code>R</code> Practice</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="evt.html"><a href="evt.html"><i class="fa fa-check"></i><b>6</b> Extreme value theory</a><ul>
-<li class="chapter" data-level="6.1" data-path="evt.html"><a href="evt.html#id-05-learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="6.2" data-path="evt.html"><a href="evt.html#id-05-theory"><i class="fa fa-check"></i><b>6.2</b> Theory</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="evt.html"><a href="evt.html#extreme-value-distributions"><i class="fa fa-check"></i><b>6.2.1</b> Extreme value distributions</a></li>
-<li class="chapter" data-level="6.2.2" data-path="evt.html"><a href="evt.html#calcuating-and-interpreting-tail-weights"><i class="fa fa-check"></i><b>6.2.2</b> Calcuating and interpreting tail weights</a></li>
+<li class="chapter" data-level="6" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>6</b> Time series</a><ul>
+<li class="chapter" data-level="" data-path="time-series.html"><a href="time-series.html#objectives-time-series"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="6.1" data-path="time-series.html"><a href="time-series.html#theory-time-series"><i class="fa fa-check"></i><b>6.1</b> Theory</a></li>
+<li class="chapter" data-level="6.2" data-path="time-series.html"><a href="time-series.html#concept-and-properties-of-time-series"><i class="fa fa-check"></i><b>6.2</b> Concept and properties of time series</a></li>
+<li class="chapter" data-level="6.3" data-path="time-series.html"><a href="time-series.html#concept-of-stationary-random-series"><i class="fa fa-check"></i><b>6.3</b> Concept of stationary random series</a></li>
+<li class="chapter" data-level="6.4" data-path="time-series.html"><a href="time-series.html#concept-of-a-filter-applied-to-a-stationary-random-series"><i class="fa fa-check"></i><b>6.4</b> Concept of a filter applied to a stationary random series</a></li>
+<li class="chapter" data-level="6.5" data-path="time-series.html"><a href="time-series.html#notation-for-operators"><i class="fa fa-check"></i><b>6.5</b> Notation for operators</a></li>
+<li class="chapter" data-level="6.6" data-path="time-series.html"><a href="time-series.html#the-characteristic-equation-of-time-series"><i class="fa fa-check"></i><b>6.6</b> The characteristic equation of time series</a></li>
+<li class="chapter" data-level="6.7" data-path="time-series.html"><a href="time-series.html#concept-and-properties-of-random-walks"><i class="fa fa-check"></i><b>6.7</b> Concept and properties of random walks</a></li>
+<li class="chapter" data-level="6.8" data-path="time-series.html"><a href="time-series.html#concept-of-a-multivariate-autoregressive-model"><i class="fa fa-check"></i><b>6.8</b> Concept of a multivariate autoregressive model</a></li>
+<li class="chapter" data-level="6.9" data-path="time-series.html"><a href="time-series.html#concept-of-cointegrated-time-series"><i class="fa fa-check"></i><b>6.9</b> Concept of cointegrated time series</a></li>
+<li><a href="time-series.html#practice-time-series"><code>R</code> Practice</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="evt.html"><a href="evt.html#id-05-practice"><i class="fa fa-check"></i><b>6.3</b> <code>R</code> Practice</a></li>
+<li class="chapter" data-level="7" data-path="stochastic-processes.html"><a href="stochastic-processes.html"><i class="fa fa-check"></i><b>7</b> Stochastic processes</a><ul>
+<li class="chapter" data-level="" data-path="stochastic-processes.html"><a href="stochastic-processes.html#objectives-stochastic-processes"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="stochastic-processes.html"><a href="stochastic-processes.html#theory-stochastic-processes"><i class="fa fa-check"></i>Theory</a></li>
+<li class="chapter" data-level="7.1" data-path="stochastic-processes.html"><a href="stochastic-processes.html#defining-stochastic-process"><i class="fa fa-check"></i><b>7.1</b> Defining stochastic process</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="stochastic-processes.html"><a href="stochastic-processes.html#defining-a-counting-process"><i class="fa fa-check"></i><b>7.1.1</b> Defining a counting process</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>7</b> Time series</a><ul>
-<li class="chapter" data-level="7.1" data-path="time-series.html"><a href="time-series.html#id-06-learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="7.2" data-path="time-series.html"><a href="time-series.html#id-06-theory"><i class="fa fa-check"></i><b>7.2</b> Theory</a><ul>
-<li class="chapter" data-level="7.2.1" data-path="time-series.html"><a href="time-series.html#concept-and-properties-of-time-series"><i class="fa fa-check"></i><b>7.2.1</b> Concept and properties of time series</a></li>
-<li class="chapter" data-level="7.2.2" data-path="time-series.html"><a href="time-series.html#concept-of-stationary-random-series"><i class="fa fa-check"></i><b>7.2.2</b> Concept of stationary random series</a></li>
-<li class="chapter" data-level="7.2.3" data-path="time-series.html"><a href="time-series.html#concept-of-a-filter-applied-to-a-stationary-random-series"><i class="fa fa-check"></i><b>7.2.3</b> Concept of a filter applied to a stationary random series</a></li>
-<li class="chapter" data-level="7.2.4" data-path="time-series.html"><a href="time-series.html#notation-for-operators"><i class="fa fa-check"></i><b>7.2.4</b> Notation for operators</a></li>
-<li class="chapter" data-level="7.2.5" data-path="time-series.html"><a href="time-series.html#the-characteristic-equation-of-time-series"><i class="fa fa-check"></i><b>7.2.5</b> The characteristic equation of time series</a></li>
-<li class="chapter" data-level="7.2.6" data-path="time-series.html"><a href="time-series.html#concept-and-properties-of-random-walks"><i class="fa fa-check"></i><b>7.2.6</b> Concept and properties of random walks</a></li>
-<li class="chapter" data-level="7.2.7" data-path="time-series.html"><a href="time-series.html#concept-of-a-multivariate-autoregressive-model"><i class="fa fa-check"></i><b>7.2.7</b> Concept of a multivariate autoregressive model</a></li>
-<li class="chapter" data-level="7.2.8" data-path="time-series.html"><a href="time-series.html#concept-of-cointegrated-time-series"><i class="fa fa-check"></i><b>7.2.8</b> Concept of cointegrated time series</a></li>
+<li class="chapter" data-level="7.2" data-path="stochastic-processes.html"><a href="stochastic-processes.html#classifying-stochastic-processes"><i class="fa fa-check"></i><b>7.2</b> Classifying stochastic processes</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="stochastic-processes.html"><a href="stochastic-processes.html#time-basis"><i class="fa fa-check"></i><b>7.2.1</b> Time basis</a></li>
+<li class="chapter" data-level="7.2.2" data-path="stochastic-processes.html"><a href="stochastic-processes.html#state-space"><i class="fa fa-check"></i><b>7.2.2</b> State space</a></li>
+<li class="chapter" data-level="7.2.3" data-path="stochastic-processes.html"><a href="stochastic-processes.html#mixed-type-stochastic-process"><i class="fa fa-check"></i><b>7.2.3</b> Mixed type stochastic process</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="time-series.html"><a href="time-series.html#id-06-practice"><i class="fa fa-check"></i><b>7.3</b> <code>R</code> Practice</a></li>
+<li class="chapter" data-level="7.3" data-path="stochastic-processes.html"><a href="stochastic-processes.html#applications-of-mixed-processes"><i class="fa fa-check"></i><b>7.3</b> Applications of mixed processes</a></li>
+<li><a href="stochastic-processes.html#practice-stochastic-processes"><code>R</code> Practice</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="stochastic-processes.html"><a href="stochastic-processes.html"><i class="fa fa-check"></i><b>8</b> Stochastic processes</a><ul>
-<li class="chapter" data-level="8.1" data-path="stochastic-processes.html"><a href="stochastic-processes.html#id-07-learning-objectives"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="8.2" data-path="stochastic-processes.html"><a href="stochastic-processes.html#id-07-theory"><i class="fa fa-check"></i><b>8.2</b> Theory</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="stochastic-processes.html"><a href="stochastic-processes.html#defining-stochastic-process"><i class="fa fa-check"></i><b>8.2.1</b> Defining stochastic process</a></li>
-<li class="chapter" data-level="8.2.2" data-path="stochastic-processes.html"><a href="stochastic-processes.html#classifying-stochastic-processes"><i class="fa fa-check"></i><b>8.2.2</b> Classifying stochastic processes</a></li>
-<li class="chapter" data-level="8.2.3" data-path="stochastic-processes.html"><a href="stochastic-processes.html#applications-of-mixed-processes"><i class="fa fa-check"></i><b>8.2.3</b> Applications of mixed processes</a></li>
+<li class="chapter" data-level="8" data-path="markov-chains.html"><a href="markov-chains.html"><i class="fa fa-check"></i><b>8</b> Markov chains</a><ul>
+<li class="chapter" data-level="" data-path="markov-chains.html"><a href="markov-chains.html#objectives-markov-chains"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="markov-chains.html"><a href="markov-chains.html#theory-markov-chains"><i class="fa fa-check"></i>Theory</a></li>
+<li class="chapter" data-level="8.1" data-path="markov-chains.html"><a href="markov-chains.html#features-of-a-markov-chain-model"><i class="fa fa-check"></i><b>8.1</b> Features of a Markov chain model</a></li>
+<li class="chapter" data-level="8.2" data-path="markov-chains.html"><a href="markov-chains.html#chapman-kolmogorov-equations"><i class="fa fa-check"></i><b>8.2</b> Chapman-Kolmogorov equations</a></li>
+<li class="chapter" data-level="8.3" data-path="markov-chains.html"><a href="markov-chains.html#stationary-distribution-for-a-markov-chain"><i class="fa fa-check"></i><b>8.3</b> Stationary distribution for a Markov chain</a></li>
+<li class="chapter" data-level="8.4" data-path="markov-chains.html"><a href="markov-chains.html#frequency-based-experience-rating"><i class="fa fa-check"></i><b>8.4</b> Frequency based experience rating</a></li>
+<li class="chapter" data-level="8.5" data-path="markov-chains.html"><a href="markov-chains.html#time-inhomogeneous-markov-chain-model"><i class="fa fa-check"></i><b>8.5</b> Time-inhomogeneous Markov chain model</a></li>
+<li class="chapter" data-level="8.6" data-path="markov-chains.html"><a href="markov-chains.html#markov-chains-in-modelling"><i class="fa fa-check"></i><b>8.6</b> Markov chains in modelling</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="markov-chains.html"><a href="markov-chains.html#simulating-a-markov-chain"><i class="fa fa-check"></i><b>8.6.1</b> Simulating a Markov chain</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="stochastic-processes.html"><a href="stochastic-processes.html#id-07-practice"><i class="fa fa-check"></i><b>8.3</b> <code>R</code> Practice</a></li>
+<li><a href="markov-chains.html#practice-markov-chains"><code>R</code> Practice</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="markov-chains.html"><a href="markov-chains.html"><i class="fa fa-check"></i><b>9</b> Markov chains</a><ul>
-<li class="chapter" data-level="9.1" data-path="markov-chains.html"><a href="markov-chains.html#id-08-learning-objectives"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="9.2" data-path="markov-chains.html"><a href="markov-chains.html#id-08-theory"><i class="fa fa-check"></i><b>9.2</b> Theory</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="markov-chains.html"><a href="markov-chains.html#features-of-a-markov-chain-model"><i class="fa fa-check"></i><b>9.2.1</b> Features of a Markov chain model</a></li>
-<li class="chapter" data-level="9.2.2" data-path="markov-chains.html"><a href="markov-chains.html#chapman-kolmogorov-equations"><i class="fa fa-check"></i><b>9.2.2</b> Chapman-Kolmogorov equations</a></li>
-<li class="chapter" data-level="9.2.3" data-path="markov-chains.html"><a href="markov-chains.html#stationary-distribution-for-a-markov-chain"><i class="fa fa-check"></i><b>9.2.3</b> Stationary distribution for a Markov chain</a></li>
-<li class="chapter" data-level="9.2.4" data-path="markov-chains.html"><a href="markov-chains.html#frequency-based-experience-rating"><i class="fa fa-check"></i><b>9.2.4</b> Frequency based experience rating</a></li>
-<li class="chapter" data-level="9.2.5" data-path="markov-chains.html"><a href="markov-chains.html#time-inhomogeneous-markov-chain-model"><i class="fa fa-check"></i><b>9.2.5</b> Time-inhomogeneous Markov chain model</a></li>
-<li class="chapter" data-level="9.2.6" data-path="markov-chains.html"><a href="markov-chains.html#markov-chains-in-modelling"><i class="fa fa-check"></i><b>9.2.6</b> Markov chains in modelling</a></li>
+<li class="chapter" data-level="9" data-path="markov-processes.html"><a href="markov-processes.html"><i class="fa fa-check"></i><b>9</b> Markov processes</a><ul>
+<li class="chapter" data-level="" data-path="markov-processes.html"><a href="markov-processes.html#objectives-09"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="markov-processes.html"><a href="markov-processes.html#theory-09"><i class="fa fa-check"></i>Theory</a></li>
+<li class="chapter" data-level="9.1" data-path="markov-processes.html"><a href="markov-processes.html#features-of-a-markov-process-model"><i class="fa fa-check"></i><b>9.1</b> Features of a Markov process model</a></li>
+<li class="chapter" data-level="9.2" data-path="markov-processes.html"><a href="markov-processes.html#poisson-process"><i class="fa fa-check"></i><b>9.2</b> Poisson process</a></li>
+<li class="chapter" data-level="9.3" data-path="markov-processes.html"><a href="markov-processes.html#kolmogorov-equations-for-a-markov-process"><i class="fa fa-check"></i><b>9.3</b> Kolmogorov equations for a Markov process</a></li>
+<li class="chapter" data-level="9.4" data-path="markov-processes.html"><a href="markov-processes.html#solving-kolmogorv-equations"><i class="fa fa-check"></i><b>9.4</b> Solving Kolmogorv equations</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="markov-processes.html"><a href="markov-processes.html#simple-cases"><i class="fa fa-check"></i><b>9.4.1</b> Simple cases</a></li>
+<li class="chapter" data-level="9.4.2" data-path="markov-processes.html"><a href="markov-processes.html#more-general-cases"><i class="fa fa-check"></i><b>9.4.2</b> More general cases</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="markov-chains.html"><a href="markov-chains.html#id-08-practice"><i class="fa fa-check"></i><b>9.3</b> <code>R</code> Practice</a></li>
+<li class="chapter" data-level="9.5" data-path="markov-processes.html"><a href="markov-processes.html#sickness-and-marriage-models"><i class="fa fa-check"></i><b>9.5</b> Sickness and marriage models</a></li>
+<li class="chapter" data-level="9.6" data-path="markov-processes.html"><a href="markov-processes.html#markov-jump-process"><i class="fa fa-check"></i><b>9.6</b> Markov jump process</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="markov-processes.html"><a href="markov-processes.html#simulating-a-markov-jump-process"><i class="fa fa-check"></i><b>9.6.1</b> Simulating a Markov jump process</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="markov-processes.html"><a href="markov-processes.html"><i class="fa fa-check"></i><b>10</b> Markov processes</a><ul>
-<li class="chapter" data-level="10.1" data-path="markov-processes.html"><a href="markov-processes.html#id-09-learning-objectives"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="10.2" data-path="markov-processes.html"><a href="markov-processes.html#id-09-theory"><i class="fa fa-check"></i><b>10.2</b> Theory</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="markov-processes.html"><a href="markov-processes.html#features-of-a-markov-process-model"><i class="fa fa-check"></i><b>10.2.1</b> Features of a Markov process model</a></li>
-<li class="chapter" data-level="10.2.2" data-path="markov-processes.html"><a href="markov-processes.html#poisson-process"><i class="fa fa-check"></i><b>10.2.2</b> Poisson process</a></li>
-<li class="chapter" data-level="10.2.3" data-path="markov-processes.html"><a href="markov-processes.html#kolmogorov-equations-for-a-markov-process"><i class="fa fa-check"></i><b>10.2.3</b> Kolmogorov equations for a Markov process</a></li>
-<li class="chapter" data-level="10.2.4" data-path="markov-processes.html"><a href="markov-processes.html#solving-kolmogorv-equations"><i class="fa fa-check"></i><b>10.2.4</b> Solving Kolmogorv equations</a></li>
-<li class="chapter" data-level="10.2.5" data-path="markov-processes.html"><a href="markov-processes.html#sickness-and-marriage-models"><i class="fa fa-check"></i><b>10.2.5</b> Sickness and marriage models</a></li>
-<li class="chapter" data-level="10.2.6" data-path="markov-processes.html"><a href="markov-processes.html#markov-jump-process"><i class="fa fa-check"></i><b>10.2.6</b> Markov jump process</a></li>
+<li><a href="markov-processes.html#practice-09"><code>R</code> Practice</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="markov-processes.html"><a href="markov-processes.html#id-09-practice"><i class="fa fa-check"></i><b>10.3</b> <code>R</code> Practice</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="survival-models.html"><a href="survival-models.html"><i class="fa fa-check"></i><b>11</b> Survival models</a></li>
-<li class="chapter" data-level="12" data-path="lifetime-distributions.html"><a href="lifetime-distributions.html"><i class="fa fa-check"></i><b>12</b> Lifetime distributions</a></li>
-<li class="chapter" data-level="13" data-path="transition-intensities.html"><a href="transition-intensities.html"><i class="fa fa-check"></i><b>13</b> Estimating transition intensities</a></li>
-<li class="chapter" data-level="14" data-path="graduation.html"><a href="graduation.html"><i class="fa fa-check"></i><b>14</b> Graduation</a></li>
-<li class="chapter" data-level="15" data-path="mortality-projection.html"><a href="mortality-projection.html"><i class="fa fa-check"></i><b>15</b> Mortality projection</a></li>
-<li class="chapter" data-level="16" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>16</b> Machine learning</a><ul>
-<li class="chapter" data-level="16.1" data-path="machine-learning.html"><a href="machine-learning.html#id-15-learning-objectives"><i class="fa fa-check"></i><b>16.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="16.2" data-path="machine-learning.html"><a href="machine-learning.html#id-15-theory"><i class="fa fa-check"></i><b>16.2</b> Theory</a><ul>
-<li class="chapter" data-level="16.2.1" data-path="machine-learning.html"><a href="machine-learning.html#machine-learning-topics"><i class="fa fa-check"></i><b>16.2.1</b> Machine learning topics</a></li>
-<li class="chapter" data-level="16.2.2" data-path="machine-learning.html"><a href="machine-learning.html#machine-learning-from-data"><i class="fa fa-check"></i><b>16.2.2</b> Machine learning from data</a></li>
-<li class="chapter" data-level="16.2.3" data-path="machine-learning.html"><a href="machine-learning.html#supervised-machine-learning"><i class="fa fa-check"></i><b>16.2.3</b> Supervised machine learning</a></li>
-<li class="chapter" data-level="16.2.4" data-path="machine-learning.html"><a href="machine-learning.html#unsupervised-machine-learning"><i class="fa fa-check"></i><b>16.2.4</b> Unsupervised machine learning</a></li>
-<li class="chapter" data-level="16.2.5" data-path="machine-learning.html"><a href="machine-learning.html#penalised-regression"><i class="fa fa-check"></i><b>16.2.5</b> Penalised regression</a></li>
-<li class="chapter" data-level="16.2.6" data-path="machine-learning.html"><a href="machine-learning.html#decision-trees"><i class="fa fa-check"></i><b>16.2.6</b> Decision trees</a></li>
-<li class="chapter" data-level="16.2.7" data-path="machine-learning.html"><a href="machine-learning.html#perspectives-of-non-actuarial-professionals"><i class="fa fa-check"></i><b>16.2.7</b> Perspectives of non-actuarial professionals</a></li>
-</ul></li>
-<li class="chapter" data-level="16.3" data-path="machine-learning.html"><a href="machine-learning.html#id-15-practice"><i class="fa fa-check"></i><b>16.3</b> <code>R</code> Practice</a></li>
+<li class="chapter" data-level="10" data-path="survival-models.html"><a href="survival-models.html"><i class="fa fa-check"></i><b>10</b> Survival models</a></li>
+<li class="chapter" data-level="11" data-path="lifetime-distributions.html"><a href="lifetime-distributions.html"><i class="fa fa-check"></i><b>11</b> Lifetime distributions</a></li>
+<li class="chapter" data-level="12" data-path="transition-intensities.html"><a href="transition-intensities.html"><i class="fa fa-check"></i><b>12</b> Estimating transition intensities</a></li>
+<li class="chapter" data-level="13" data-path="graduation.html"><a href="graduation.html"><i class="fa fa-check"></i><b>13</b> Graduation</a></li>
+<li class="chapter" data-level="14" data-path="mortality-projection.html"><a href="mortality-projection.html"><i class="fa fa-check"></i><b>14</b> Mortality projection</a></li>
+<li class="chapter" data-level="15" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>15</b> Machine learning</a><ul>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#objectives-15"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#theory-15"><i class="fa fa-check"></i>Theory</a></li>
+<li class="chapter" data-level="15.1" data-path="machine-learning.html"><a href="machine-learning.html#machine-learning-topics"><i class="fa fa-check"></i><b>15.1</b> Machine learning topics</a></li>
+<li class="chapter" data-level="15.2" data-path="machine-learning.html"><a href="machine-learning.html#machine-learning-from-data"><i class="fa fa-check"></i><b>15.2</b> Machine learning from data</a></li>
+<li class="chapter" data-level="15.3" data-path="machine-learning.html"><a href="machine-learning.html#supervised-machine-learning"><i class="fa fa-check"></i><b>15.3</b> Supervised machine learning</a></li>
+<li class="chapter" data-level="15.4" data-path="machine-learning.html"><a href="machine-learning.html#unsupervised-machine-learning"><i class="fa fa-check"></i><b>15.4</b> Unsupervised machine learning</a></li>
+<li class="chapter" data-level="15.5" data-path="machine-learning.html"><a href="machine-learning.html#penalised-regression"><i class="fa fa-check"></i><b>15.5</b> Penalised regression</a></li>
+<li class="chapter" data-level="15.6" data-path="machine-learning.html"><a href="machine-learning.html#decision-trees"><i class="fa fa-check"></i><b>15.6</b> Decision trees</a></li>
+<li class="chapter" data-level="15.7" data-path="machine-learning.html"><a href="machine-learning.html#perspectives-of-non-actuarial-professionals"><i class="fa fa-check"></i><b>15.7</b> Perspectives of non-actuarial professionals</a></li>
+<li><a href="machine-learning.html#practice-15"><code>R</code> Practice</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/agarbiak" target="blank">A book by Alex Garbiak</a></li>
@@ -263,9 +273,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="markov-processes" class="section level1">
-<h1><span class="header-section-number">Chapter 10</span> Markov processes</h1>
-<div id="id-09-learning-objectives" class="section level2">
-<h2><span class="header-section-number">10.1</span> Learning Objectives</h2>
+<h1><span class="header-section-number">Chapter 9</span> Markov processes</h1>
+<div id="objectives-09" class="section level2 unnumbered">
+<h2>Learning Objectives</h2>
 <ol style="list-style-type: decimal">
 <li>State the essential features of a Markov process model.</li>
 <li>Define a Poisson process, derive the distribution of the number of events in a given time interval, derive the distribution of inter-event times, and apply these results.</li>
@@ -276,39 +286,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Demonstrate how Markov jump processes can be used as a tool for modelling and how they can be simulated.</li>
 </ol>
 </div>
-<div id="id-09-theory" class="section level2">
-<h2><span class="header-section-number">10.2</span> Theory</h2>
+<div id="theory-09" class="section level2 unnumbered">
+<h2>Theory</h2>
 <p><strong>TO ADD THEORY ABOUT MARKOV PROCESSES HERE</strong></p>
-<div id="features-of-a-markov-process-model" class="section level3">
-<h3><span class="header-section-number">10.2.1</span> Features of a Markov process model</h3>
 </div>
-<div id="poisson-process" class="section level3">
-<h3><span class="header-section-number">10.2.2</span> Poisson process</h3>
+<div id="features-of-a-markov-process-model" class="section level2">
+<h2><span class="header-section-number">9.1</span> Features of a Markov process model</h2>
 </div>
-<div id="kolmogorov-equations-for-a-markov-process" class="section level3">
-<h3><span class="header-section-number">10.2.3</span> Kolmogorov equations for a Markov process</h3>
+<div id="poisson-process" class="section level2">
+<h2><span class="header-section-number">9.2</span> Poisson process</h2>
 </div>
-<div id="solving-kolmogorv-equations" class="section level3">
-<h3><span class="header-section-number">10.2.4</span> Solving Kolmogorv equations</h3>
-<div id="simple-cases" class="section level4">
-<h4><span class="header-section-number">10.2.4.1</span> Simple cases</h4>
+<div id="kolmogorov-equations-for-a-markov-process" class="section level2">
+<h2><span class="header-section-number">9.3</span> Kolmogorov equations for a Markov process</h2>
 </div>
-<div id="more-general-cases" class="section level4">
-<h4><span class="header-section-number">10.2.4.2</span> More general cases</h4>
+<div id="solving-kolmogorv-equations" class="section level2">
+<h2><span class="header-section-number">9.4</span> Solving Kolmogorv equations</h2>
+<div id="simple-cases" class="section level3">
+<h3><span class="header-section-number">9.4.1</span> Simple cases</h3>
 </div>
-</div>
-<div id="sickness-and-marriage-models" class="section level3">
-<h3><span class="header-section-number">10.2.5</span> Sickness and marriage models</h3>
-</div>
-<div id="markov-jump-process" class="section level3">
-<h3><span class="header-section-number">10.2.6</span> Markov jump process</h3>
-<div id="simulating-a-markov-jump-process" class="section level4">
-<h4><span class="header-section-number">10.2.6.1</span> Simulating a Markov jump process</h4>
+<div id="more-general-cases" class="section level3">
+<h3><span class="header-section-number">9.4.2</span> More general cases</h3>
 </div>
 </div>
+<div id="sickness-and-marriage-models" class="section level2">
+<h2><span class="header-section-number">9.5</span> Sickness and marriage models</h2>
 </div>
-<div id="id-09-practice" class="section level2">
-<h2><span class="header-section-number">10.3</span> <code>R</code> Practice</h2>
+<div id="markov-jump-process" class="section level2">
+<h2><span class="header-section-number">9.6</span> Markov jump process</h2>
+<div id="simulating-a-markov-jump-process" class="section level3">
+<h3><span class="header-section-number">9.6.1</span> Simulating a Markov jump process</h3>
+</div>
+</div>
+<div id="practice-09" class="section level2 unnumbered">
+<h2><code>R</code> Practice</h2>
 <p><strong>TO ADD R EXAMPLE ABOUT MARKOV PROCESSES HERE</strong></p>
 
 </div>
@@ -363,7 +373,7 @@ gitbook.start({
 },
 "download": null,
 "toc": {
-"collapse": "subsection",
+"collapse": "section",
 "scroll_highlight": true
 },
 "toolbar": {

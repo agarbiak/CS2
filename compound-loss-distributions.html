@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 15 Machine learning | Risk Modelling and Survival Analysis</title>
+  <title>Chapter 3 Compound loss distributions | Risk Modelling and Survival Analysis</title>
   <meta name="description" content="Risk modelling and survival analysis for actuaries providing R code examples." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 15 Machine learning | Risk Modelling and Survival Analysis" />
+  <meta property="og:title" content="Chapter 3 Compound loss distributions | Risk Modelling and Survival Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="agarbiak/CS2" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 15 Machine learning | Risk Modelling and Survival Analysis" />
+  <meta name="twitter:title" content="Chapter 3 Compound loss distributions | Risk Modelling and Survival Analysis" />
   
   <meta name="twitter:description" content="Risk modelling and survival analysis for actuaries providing R code examples." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="mortality-projection.html"/>
-
+<link rel="prev" href="loss-distributions.html"/>
+<link rel="next" href="copulas.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -272,192 +272,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="machine-learning" class="section level1">
-<h1><span class="header-section-number">Chapter 15</span> Machine learning</h1>
-<div id="objectives-15" class="section level2 unnumbered">
+<div id="compound-loss-distributions" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Compound loss distributions</h1>
+<div id="objectives-compound-loss-distributions" class="section level2 unnumbered">
 <h2>Learning Objectives</h2>
 <ol style="list-style-type: decimal">
-<li>Explain the main branches of machine learning and describe examples of the types of problems typically addressed by machine learning.</li>
-<li>Explain and apply high-level concepts relevant to learning from data.</li>
-<li>Describe and give examples of key supervised and unsupervised machine learning techniques, explaining the difference between regression and classification and between generative and discriminative models.</li>
-<li>Explain in detail and use appropriate software to apply machine learning techniques (e.g. penalised regression and decision trees) to simple problems.</li>
-<li>Demonstrate an understanding of the perspectives of statisticians, data scientists, and other quantitative researchers from non-actuarial backgrounds.</li>
+<li>Construct models appropriate for short term insurance contracts in terms of the numbers of claims and the amounts of individual claims.</li>
+<li>Describe the major simplifying assumptions underlying such models.</li>
+<li>Define a compound Poisson distribution and show that the sum of independent random variables each having a compound Poisson distribution also has a compound Poisson distribution.</li>
+<li>Derive the mean, variance and coefficient of skewness for compound binomial, compound Poisson and compound negative binomial random variables.</li>
+<li>Repeat this for both the insurer and the reinsurer after the operation of simple forms of proportional and excess of loss reinsurance.</li>
 </ol>
 </div>
-<div id="theory-15" class="section level2 unnumbered">
+<div id="theory-compound-loss-distributions" class="section level2 unnumbered">
 <h2>Theory</h2>
-<p><strong>TO ADD THEORY ABOUT MACHINE LEARNING HERE</strong></p>
+<p><strong>TO ADD THEORY ABOUT COMPOUND MODELLING HERE</strong></p>
 </div>
-<div id="machine-learning-topics" class="section level2">
-<h2><span class="header-section-number">15.1</span> Machine learning topics</h2>
+<div id="modelling-frequency-of-insurance-claims" class="section level2">
+<h2><span class="header-section-number">3.1</span> Modelling frequency of insurance claims</h2>
 </div>
-<div id="machine-learning-from-data" class="section level2">
-<h2><span class="header-section-number">15.2</span> Machine learning from data</h2>
+<div id="modelling-severity-of-insurance-claims" class="section level2">
+<h2><span class="header-section-number">3.2</span> Modelling severity of insurance claims</h2>
 </div>
-<div id="supervised-machine-learning" class="section level2">
-<h2><span class="header-section-number">15.3</span> Supervised machine learning</h2>
+<div id="compound-loss-distributions-1" class="section level2">
+<h2><span class="header-section-number">3.3</span> Compound loss distributions</h2>
+<div id="compound-binomial" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Compound binomial</h3>
 </div>
-<div id="unsupervised-machine-learning" class="section level2">
-<h2><span class="header-section-number">15.4</span> Unsupervised machine learning</h2>
+<div id="compound-poisson" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Compound Poisson</h3>
 </div>
-<div id="penalised-regression" class="section level2">
-<h2><span class="header-section-number">15.5</span> Penalised regression</h2>
+<div id="compound-negative-binomial" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Compound negative binomial</h3>
 </div>
-<div id="decision-trees" class="section level2">
-<h2><span class="header-section-number">15.6</span> Decision trees</h2>
 </div>
-<div id="perspectives-of-non-actuarial-professionals" class="section level2">
-<h2><span class="header-section-number">15.7</span> Perspectives of non-actuarial professionals</h2>
+<div id="compound-loss-distributions-after-reinsurance" class="section level2">
+<h2><span class="header-section-number">3.4</span> Compound loss distributions after reinsurance</h2>
 </div>
-<div id="practice-15" class="section level2 unnumbered">
+<div id="practice-compound-loss-distributions" class="section level2 unnumbered">
 <h2><code>R</code> Practice</h2>
-<p>We are managing a <code>portfolio</code> of investments that contains 200 assets. In this <code>portfolio</code> we measure the following features:</p>
-<ul>
-<li>Price-to-Earnings Ratio (“<em>PE</em>”), labelled <span class="math inline">\(x1\)</span> with <span class="math inline">\(x1 \sim \mathcal{N}(3,\,1)\)</span></li>
-<li>Price-to-Book Ratio (“<em>PB</em>”), labelled <span class="math inline">\(x2\)</span> with 65% of the assets following <span class="math inline">\(\mathcal{N}(10,\,1)\)</span> and the remaining 35% following <span class="math inline">\(\mathcal{N}(4,\,1)\)</span></li>
-</ul>
-<p>We replicate this in <code>R</code> as follows:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="machine-learning.html#cb27-1"></a><span class="kw">library</span>(dplyr) <span class="co"># Data manipulation</span></span>
-<span id="cb27-2"><a href="machine-learning.html#cb27-2"></a></span>
-<span id="cb27-3"><a href="machine-learning.html#cb27-3"></a><span class="kw">set.seed</span>(<span class="dv">42</span>) <span class="co"># Fix result</span></span>
-<span id="cb27-4"><a href="machine-learning.html#cb27-4"></a>portfolio &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
-<span id="cb27-5"><a href="machine-learning.html#cb27-5"></a>  <span class="dt">x1 =</span> <span class="kw">rnorm</span>(<span class="dv">200</span>, <span class="dv">3</span>, <span class="dv">1</span>),</span>
-<span id="cb27-6"><a href="machine-learning.html#cb27-6"></a>  <span class="dt">x2 =</span> <span class="kw">scale</span>(</span>
-<span id="cb27-7"><a href="machine-learning.html#cb27-7"></a>    <span class="kw">c</span>(</span>
-<span id="cb27-8"><a href="machine-learning.html#cb27-8"></a>      <span class="kw">rnorm</span>(<span class="dv">70</span>, <span class="dv">4</span>, <span class="dv">1</span>),</span>
-<span id="cb27-9"><a href="machine-learning.html#cb27-9"></a>      <span class="kw">rnorm</span>(<span class="dv">130</span>, <span class="dv">10</span>, <span class="dv">1</span>)</span>
-<span id="cb27-10"><a href="machine-learning.html#cb27-10"></a>    )</span>
-<span id="cb27-11"><a href="machine-learning.html#cb27-11"></a>  )</span>
-<span id="cb27-12"><a href="machine-learning.html#cb27-12"></a>)</span>
-<span id="cb27-13"><a href="machine-learning.html#cb27-13"></a></span>
-<span id="cb27-14"><a href="machine-learning.html#cb27-14"></a><span class="kw">glimpse</span>(portfolio)</span></code></pre></div>
-<pre><code>## Rows: 200
-## Columns: 2
-## $ x1 &lt;dbl&gt; 4.3709584, 2.4353018, 3.3631284, 3.6328626, 3.4042683, 2.8938755...
-## $ x2 &lt;dbl&gt; -1.9258826, -1.1653603, -0.8925320, -0.6031994, -1.7225948, -1.6...</code></pre>
-<p>Here the <code class="sourceCode r"><span class="kw">scale</span>()</code> function scales each element in the result by subtracting the sample mean and dividing by the sample standard deviation.</p>
-<p>Next we want to explore whether these 200 assets can be divided into two clusters which we will label arbitrarily <code>A</code> and <code>B</code> based on the two metrics we have measured, PE (as <span class="math inline">\(x1\)</span>) and PB (as <span class="math inline">\(x2\)</span>).</p>
-<p>We will first assign the assets evenly into these two clusters:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="machine-learning.html#cb29-1"></a>group_label_stage1 &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
-<span id="cb29-2"><a href="machine-learning.html#cb29-2"></a>  <span class="kw">rep</span>(<span class="st">&quot;A&quot;</span>, <span class="dv">100</span>),</span>
-<span id="cb29-3"><a href="machine-learning.html#cb29-3"></a>  <span class="kw">rep</span>(<span class="st">&quot;B&quot;</span>, <span class="dv">100</span>)</span>
-<span id="cb29-4"><a href="machine-learning.html#cb29-4"></a>)</span>
-<span id="cb29-5"><a href="machine-learning.html#cb29-5"></a></span>
-<span id="cb29-6"><a href="machine-learning.html#cb29-6"></a>portfolio &lt;-<span class="st"> </span>portfolio <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb29-7"><a href="machine-learning.html#cb29-7"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">group_label_stage1 =</span> group_label_stage1)</span>
-<span id="cb29-8"><a href="machine-learning.html#cb29-8"></a></span>
-<span id="cb29-9"><a href="machine-learning.html#cb29-9"></a>ClusterACentre &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
-<span id="cb29-10"><a href="machine-learning.html#cb29-10"></a>  <span class="kw">mean</span>(portfolio<span class="op">$</span>x1[portfolio<span class="op">$</span>group_label_stage1 <span class="op">==</span><span class="st"> &quot;A&quot;</span>]),</span>
-<span id="cb29-11"><a href="machine-learning.html#cb29-11"></a>  <span class="kw">mean</span>(portfolio<span class="op">$</span>x2[portfolio<span class="op">$</span>group_label_stage1 <span class="op">==</span><span class="st"> &quot;A&quot;</span>])</span>
-<span id="cb29-12"><a href="machine-learning.html#cb29-12"></a>)</span>
-<span id="cb29-13"><a href="machine-learning.html#cb29-13"></a></span>
-<span id="cb29-14"><a href="machine-learning.html#cb29-14"></a>ClusterBCentre &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
-<span id="cb29-15"><a href="machine-learning.html#cb29-15"></a>  <span class="kw">mean</span>(portfolio<span class="op">$</span>x1[portfolio<span class="op">$</span>group_label_stage1 <span class="op">==</span><span class="st"> &quot;B&quot;</span>]),</span>
-<span id="cb29-16"><a href="machine-learning.html#cb29-16"></a>  <span class="kw">mean</span>(portfolio<span class="op">$</span>x2[portfolio<span class="op">$</span>group_label_stage1 <span class="op">==</span><span class="st"> &quot;B&quot;</span>])</span>
-<span id="cb29-17"><a href="machine-learning.html#cb29-17"></a>)</span>
-<span id="cb29-18"><a href="machine-learning.html#cb29-18"></a></span>
-<span id="cb29-19"><a href="machine-learning.html#cb29-19"></a><span class="kw">glimpse</span>(portfolio)</span></code></pre></div>
-<pre><code>## Rows: 200
-## Columns: 3
-## $ x1                 &lt;dbl&gt; 4.3709584, 2.4353018, 3.3631284, 3.6328626, 3.40...
-## $ x2                 &lt;dbl&gt; -1.9258826, -1.1653603, -0.8925320, -0.6031994, ...
-## $ group_label_stage1 &lt;chr&gt; &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;...</code></pre>
-<p>We have:</p>
-<ul>
-<li>The centre of cluster <code>A</code>, given by <span class="math inline">\((x1_A,\, x2_A)\)</span> is 3.033, -0.691, and</li>
-<li>The centre of cluster <code>B</code>, given by <span class="math inline">\((x1_A,\, x2_A)\)</span> is 2.913, 0.691.</li>
-</ul>
-<p>Next we want to calculate the Euclidean distance between:</p>
-<ul>
-<li><span class="math inline">\((x1, x2)\)</span> and the centre of cluster <code>A</code>, and</li>
-<li><span class="math inline">\((x1, x2)\)</span> and the centre of cluster <code>B</code>.</li>
-</ul>
-<p>We will label these distances as <code>dist_A</code> and <code>dist_B</code> respectively.</p>
-<p>The Euclidean distance is defined as:</p>
-<ul>
-<li>For <code>dist_A</code>: <span class="math inline">\(\sqrt{(x1-x1_A)^2+(x2-x2_A)^2}\)</span>, and</li>
-<li>For <code>dist_B</code>: <span class="math inline">\(\sqrt{(x1-x1_B)^2+(x2-x2_B)^2}\)</span>.</li>
-</ul>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="machine-learning.html#cb31-1"></a>dist_A &lt;-<span class="st"> </span><span class="kw">sqrt</span>(</span>
-<span id="cb31-2"><a href="machine-learning.html#cb31-2"></a>  (portfolio<span class="op">$</span>x1 <span class="op">-</span><span class="st"> </span>ClusterACentre[<span class="dv">1</span>])<span class="op">^</span><span class="dv">2</span> </span>
-<span id="cb31-3"><a href="machine-learning.html#cb31-3"></a>  <span class="op">+</span><span class="st"> </span>(portfolio<span class="op">$</span>x2 <span class="op">-</span><span class="st"> </span>ClusterACentre[<span class="dv">2</span>])<span class="op">^</span><span class="dv">2</span> </span>
-<span id="cb31-4"><a href="machine-learning.html#cb31-4"></a>)</span>
-<span id="cb31-5"><a href="machine-learning.html#cb31-5"></a></span>
-<span id="cb31-6"><a href="machine-learning.html#cb31-6"></a>dist_B &lt;-<span class="st"> </span><span class="kw">sqrt</span>(</span>
-<span id="cb31-7"><a href="machine-learning.html#cb31-7"></a>  (portfolio<span class="op">$</span>x1 <span class="op">-</span><span class="st"> </span>ClusterBCentre[<span class="dv">1</span>])<span class="op">^</span><span class="dv">2</span> </span>
-<span id="cb31-8"><a href="machine-learning.html#cb31-8"></a>  <span class="op">+</span><span class="st"> </span>(portfolio<span class="op">$</span>x2 <span class="op">-</span><span class="st"> </span>ClusterBCentre[<span class="dv">2</span>])<span class="op">^</span><span class="dv">2</span> </span>
-<span id="cb31-9"><a href="machine-learning.html#cb31-9"></a>)</span>
-<span id="cb31-10"><a href="machine-learning.html#cb31-10"></a></span>
-<span id="cb31-11"><a href="machine-learning.html#cb31-11"></a>portfolio &lt;-<span class="st"> </span>portfolio <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb31-12"><a href="machine-learning.html#cb31-12"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
-<span id="cb31-13"><a href="machine-learning.html#cb31-13"></a>    <span class="dt">dist_A =</span> dist_A,</span>
-<span id="cb31-14"><a href="machine-learning.html#cb31-14"></a>    <span class="dt">dist_B =</span> dist_B</span>
-<span id="cb31-15"><a href="machine-learning.html#cb31-15"></a>  )</span>
-<span id="cb31-16"><a href="machine-learning.html#cb31-16"></a></span>
-<span id="cb31-17"><a href="machine-learning.html#cb31-17"></a><span class="kw">glimpse</span>(portfolio)</span></code></pre></div>
-<pre><code>## Rows: 200
-## Columns: 5
-## $ x1                 &lt;dbl&gt; 4.3709584, 2.4353018, 3.3631284, 3.6328626, 3.40...
-## $ x2                 &lt;dbl&gt; -1.9258826, -1.1653603, -0.8925320, -0.6031994, ...
-## $ group_label_stage1 &lt;chr&gt; &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;...
-## $ dist_A             &lt;dbl&gt; 1.8210075, 0.7626050, 0.3871328, 0.6067517, 1.09...
-## $ dist_B             &lt;dbl&gt; 2.995957, 1.916835, 1.646514, 1.481271, 2.463299...</code></pre>
-<p>Now we will update the cluster labels (<code>A</code> and <code>B</code>) by assigning to each asset the label of the cluster whose centre is nearest from <code>dist_A</code> and <code>dist_B</code>.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="machine-learning.html#cb33-1"></a>portfolio &lt;-<span class="st"> </span>portfolio <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb33-2"><a href="machine-learning.html#cb33-2"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
-<span id="cb33-3"><a href="machine-learning.html#cb33-3"></a>    <span class="dt">group_label_stage2 =</span> <span class="kw">ifelse</span>(portfolio<span class="op">$</span>dist_A <span class="op">&lt;=</span><span class="st"> </span>portfolio<span class="op">$</span>dist_B, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>)</span>
-<span id="cb33-4"><a href="machine-learning.html#cb33-4"></a>  )</span>
-<span id="cb33-5"><a href="machine-learning.html#cb33-5"></a></span>
-<span id="cb33-6"><a href="machine-learning.html#cb33-6"></a><span class="kw">glimpse</span>(portfolio)</span></code></pre></div>
-<pre><code>## Rows: 200
-## Columns: 6
-## $ x1                 &lt;dbl&gt; 4.3709584, 2.4353018, 3.3631284, 3.6328626, 3.40...
-## $ x2                 &lt;dbl&gt; -1.9258826, -1.1653603, -0.8925320, -0.6031994, ...
-## $ group_label_stage1 &lt;chr&gt; &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;...
-## $ dist_A             &lt;dbl&gt; 1.8210075, 0.7626050, 0.3871328, 0.6067517, 1.09...
-## $ dist_B             &lt;dbl&gt; 2.995957, 1.916835, 1.646514, 1.481271, 2.463299...
-## $ group_label_stage2 &lt;chr&gt; &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;...</code></pre>
-<p>Let’s generate a 2x2 matrix showing the number of assets with each possible combination of values from <code>group_label_stage1</code> and <code>group_label_stage2</code>:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="machine-learning.html#cb35-1"></a>combos &lt;-<span class="st"> </span>portfolio <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb35-2"><a href="machine-learning.html#cb35-2"></a><span class="st">  </span><span class="kw">count</span>(group_label_stage1, group_label_stage2)</span>
-<span id="cb35-3"><a href="machine-learning.html#cb35-3"></a></span>
-<span id="cb35-4"><a href="machine-learning.html#cb35-4"></a><span class="kw">matrix</span>(</span>
-<span id="cb35-5"><a href="machine-learning.html#cb35-5"></a>  combos<span class="op">$</span>n,</span>
-<span id="cb35-6"><a href="machine-learning.html#cb35-6"></a>  <span class="dt">nrow =</span> <span class="dv">2</span>,</span>
-<span id="cb35-7"><a href="machine-learning.html#cb35-7"></a>  <span class="dt">dimnames =</span> <span class="kw">list</span>(</span>
-<span id="cb35-8"><a href="machine-learning.html#cb35-8"></a>    <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>),</span>
-<span id="cb35-9"><a href="machine-learning.html#cb35-9"></a>    <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>)</span>
-<span id="cb35-10"><a href="machine-learning.html#cb35-10"></a>  )</span>
-<span id="cb35-11"><a href="machine-learning.html#cb35-11"></a>)</span></code></pre></div>
-<pre><code>##    A  B
-## A 71  1
-## B 29 99</code></pre>
-<p>Finally let’s plot <code>x1</code> and <code>x2</code> coloured using the latest clustering labelling:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="machine-learning.html#cb37-1"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb37-2"><a href="machine-learning.html#cb37-2"></a></span>
-<span id="cb37-3"><a href="machine-learning.html#cb37-3"></a>portfolio <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb37-4"><a href="machine-learning.html#cb37-4"></a><span class="kw">ggplot</span>() <span class="op">+</span></span>
-<span id="cb37-5"><a href="machine-learning.html#cb37-5"></a><span class="st">  </span><span class="kw">geom_point</span>(</span>
-<span id="cb37-6"><a href="machine-learning.html#cb37-6"></a>    <span class="kw">aes</span>(x1, x2, <span class="dt">colour =</span> group_label_stage2)</span>
-<span id="cb37-7"><a href="machine-learning.html#cb37-7"></a>  )</span></code></pre></div>
-<p><img src="book_files/figure-html/15-machine-learning-07-1.png" width="672" /></p>
 
 </div>
 </div>
-
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="mortality-projection.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="loss-distributions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="copulas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -488,7 +351,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/agarbiak/CS2/edit/main/15-machine-learning.Rmd",
+"link": "https://github.com/agarbiak/CS2/edit/main/03-compound-distributions.Rmd",
 "text": "Edit"
 },
 "history": {
