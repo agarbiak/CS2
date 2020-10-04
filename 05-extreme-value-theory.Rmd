@@ -1,20 +1,16 @@
-# Extreme value theory {#evt}
+# Extreme value theory
 
-```{r 05-extreme-value-theory-01, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Learning Objectives {#id-05-learning-objectives}
+## Learning Objectives {-#objectives-evt}
 
 1. Recognise extreme value distributions, suitable for modelling the distribution of severity of loss and their relationships.
 2. Calculate various measures of tail weight and interpret the results to compare the tail weights.
 
-## Theory {#id-05-theory}
+## Theory {-#theory-evt}
 
 **TO ADD THEORY ABOUT EXTREME VALUE THEORY HERE**
 
-### Extreme value distributions
+## Extreme value distributions
 
-### Calcuating and interpreting tail weights
+## Calcuating and interpreting tail weights
 
-## `R` Practice {#id-05-practice}
+## `R` Practice {-#practice-evt}

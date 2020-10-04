@@ -1,10 +1,6 @@
-# Time series {#time-series}
+# Time series
 
-```{r 06-time-series-01, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Learning Objectives {#id-06-learning-objectives}
+## Learning Objectives {-#objectives-time-series}
 
 1. Explain the concept and general properties of stationary, $I(0)$, and integrated, $I(1)$, univariate time series.
 2. Explain the concept of a stationary random series.
@@ -15,26 +11,26 @@ knitr::opts_chunk$set(echo = TRUE)
 7. Explain the basic concept of a multivariate autoregressive model.
 8. Explain the concept of cointegrated time series.
 
-## Theory {#id-06-theory}
+## Theory {#theory-time-series}
 
 **TO ADD THEORY ABOUT TIME SERIES HERE**
 
-### Concept and properties of time series
+## Concept and properties of time series
 
-### Concept of stationary random series
+## Concept of stationary random series
 
-### Concept of a filter applied to a stationary random series
+## Concept of a filter applied to a stationary random series
 
-### Notation for operators
+## Notation for operators
 
-### The characteristic equation of time series
+## The characteristic equation of time series
 
-### Concept and properties of random walks
+## Concept and properties of random walks
 
-### Concept of a multivariate autoregressive model
+## Concept of a multivariate autoregressive model
 
-### Concept of cointegrated time series
+## Concept of cointegrated time series
 
-## `R` Practice {#id-06-practice}
+## `R` Practice {-#practice-time-series}
 
 **TO ADD R EXAMPLE ABOUT TIME SERIES HERE**

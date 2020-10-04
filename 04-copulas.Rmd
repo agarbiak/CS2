@@ -1,16 +1,12 @@
 # Copulas {#copulas}
 
-```{r 04-copulas-01, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Learning Objectives {#id-04-learning-objectives}
+## Learning Objectives {-#objectives-copulas}
 
 1. Describe how a copula can be characterised as a multivariate distribution function which is a function of the marginal distribution functions of its variates, and explain how this allows the marginal distributions to be investigated separately from the dependency between them.
 2. Explain the meaning of the terms dependence or concordance, upper and lower tail dependence; and state in general terms how tail dependence can be used to help select a copula suitable for modelling particular types of risk.
 3. Describe the form and characteristics of the Gaussian copula and the Archimedean family of copulas.
 
-## Theory {#id-04-theory}
+## Theory {-#theory-copulas}
 
 **TO ADD THEORY ABOUT COPULAS HERE**
 
@@ -20,4 +16,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Archimedan family of copulas
 
-## `R` Practice {#id-04-practice}
+## `R` Practice {-#practice-copulas}
